@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/searchview"
+    tools:context=".PackageInfoActivity">
+
+    <TextView
+        android:id="@+id/txtNamePackInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp" />
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="@string/searchview"
+        android:iconifiedByDefault="false"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/searchview_background"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        app:floatingSearch_close_search_on_keyboard_dismiss="true"
+        app:floatingSearch_leftActionMode="showHamburger"
+        app:floatingSearch_searchBarMarginLeft="5dp"
+        app:floatingSearch_searchBarMarginRight="5dp"
+        app:floatingSearch_searchBarMarginTop="5dp"
+        app:floatingSearch_searchHint="@string/searchview"
+        app:floatingSearch_showSearchKey="true"
+        app:floatingSearch_suggestionsListAnimDuration="250"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:layout_alignParentLeft="true"/>
+
+    <ListView
+        android:id="@+id/listviewWord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/search_view2"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/search_view2"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginStart="-17dp"
+        android:layout_marginTop="110dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/floatingmenu"
+        android:clickable="true"
+        android:tint="@android:color/white"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/iclearn"
+        tools:ignore="NotSibling"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp" />
+
+    <include layout="@layout/fab_layout" />
+
+</RelativeLayout>

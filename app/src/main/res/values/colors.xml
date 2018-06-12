@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorFacebook">#1b3c96</color>
+    <color name="white">#ffffff</color>
+    <color name="blacktheme">#0e0e0e</color>
+    <color name="blacktheme2">#0d0d0d</color>
+    <color name="bottomNav">#0541df</color>
+    <color name="searchview">#e8e9ec</color>
+    <color name="gray">#949494</color>
+    <color name="floatingmenu">#dc4b0d</color>
+    <color name="floatingmenu2">#225ecf</color>
+    <color name="floatingmenu3">#ac0ddc</color>
+</resources>

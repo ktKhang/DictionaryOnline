@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">kt Dictionary</string>
+    <string name="facebook_app_id">2016562068595574</string>
+    <string name="login">Đăng nhập</string>
+    <string name="title_activity_home">kt Dictionary</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="nav_EV">Từ điển Anh - Việt</string>
+    <string name="nav_VE">Từ điển Việt - Anh</string>
+    <string name="nav_appInfo">Thông tin ứng dụng</string>
+    <string name="nav_logout">Đăng xuất</string>
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_mypack">Từ của tôi</string>
+    <string name="nav_trans">Dịch văn bản</string>
+    <string name="searchview">Nhập để tìm kiếm...</string>
+    <string name="AddToPackage">Thêm vào gói</string>
+    <string name="yourpackages">Danh sách gói từ</string>
+    <string name="headerAddToPackage">Chọn gói để thêm từ của bạn</string>
+    <string name="addpackage">Tên gói từ mới</string>
+    <string name="datecr">Ngày tạo: </string>
+    <string name="notificationError">Gói rỗng! Hãy thêm từ để đặt thông báo từ vựng mỗi ngày </string>
+    <string name="notification">Nhấn giữ nút này để đặt thông báo từ vựng hàng ngày</string>
+    <string name="notificationSuccess">Đã đặt thông báo từ vựng hàng ngày</string>
+    <string name="confirmDeleteWord">Bạn muốn xóa từ này khỏi gói?</string>
+    <string name="confirmDeletePackage">Bạn có muốn xóa gói từ này?</string>
+    <string name="confirmAddToPackage">Bạn có muốn thêm từ vào gói này?</string>
+</resources>

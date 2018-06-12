@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "461620354492",
+    "firebase_url": "https://myproject-a8515.firebaseio.com",
+    "project_id": "myproject-a8515",
+    "storage_bucket": "myproject-a8515.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461620354492:android:7a8220bd46a1dcc0",
+        "android_client_info": {
+          "package_name": "ltk_15110229.vn.edu.hcmute.vn.dictionaryonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461620354492-48pskc7n7jj2lmtauitilvu9oqpc7dsm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ltk_15110229.vn.edu.hcmute.vn.dictionaryonline",
+            "certificate_hash": "5f2d12ecb22f529a4c5515a87eaa1f00a3c6ff41"
+          }
+        },
+        {
+          "client_id": "461620354492-gfloq37n7a9j18nri1g60ufcp59r11r5.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "461620354492-gfloq37n7a9j18nri1g60ufcp59r11r5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB120pfKbLRNraOAE_uhPnGEggmlAFmF4Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461620354492-gfloq37n7a9j18nri1g60ufcp59r11r5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navHome"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/nav_home"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/navMypack"
+        android:layout_width="match_parent"
+        android:icon="@drawable/mypack"
+        android:title="@string/nav_mypack"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/navTrans"
+        android:icon="@drawable/transdoc"
+        android:title="@string/nav_trans"
+        app:showAsAction="always"/>
+
+</menu>
