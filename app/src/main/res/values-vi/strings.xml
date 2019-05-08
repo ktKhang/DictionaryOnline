@@ -22,8 +22,9 @@
     <string name="yourpackages">Danh sách gói từ</string>
     <string name="headerAddToPackage">Chọn gói để thêm từ của bạn</string>
     <string name="addpackage">Tên gói từ mới</string>
+    <string name="addWord">Từ vựng</string>
     <string name="datecr">Ngày tạo: </string>
-    <string name="notificationError">Gói rỗng! Hãy thêm từ để đặt thông báo từ vựng mỗi ngày </string>
+    <string name="notificationError">Gói rỗng! Hãyựng thêm từ để đặt thông báo từ vựng mỗi ngày </string>
     <string name="notification">Nhấn giữ nút này để đặt thông báo từ vựng hàng ngày</string>
     <string name="notificationSuccess">Đã đặt thông báo từ vựng hàng ngày</string>
     <string name="confirmDeleteWord">Bạn muốn xóa từ này khỏi gói?</string>

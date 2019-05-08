@@ -57,7 +57,7 @@ import static android.graphics.Color.WHITE;
 import static java.security.MessageDigest.getInstance;
 
 public class MainActivity extends AppCompatActivity {
-    String url = "http://172.20.10.9:8080/androidwebservice/insertAccount.php";
+    String url = "http://"+Constant.API_URL+":80/androidwebservice/insertAccount.php";
     private Button btnFacebook;
     TextView txtName;
     private CallbackManager callbackManager;

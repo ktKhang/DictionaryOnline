@@ -98,10 +98,10 @@ public class PackageInfoActivity extends AppCompatActivity {
         final FirebaseUser user = mAuth.getCurrentUser();
         String url;
         if(readPreference() == "VE"){
-            url = "http://172.20.10.9:8080/androidwebservice/getWordsInPackage.php?package_id=" + pack.getId()
+            url = "http://"+Constant.API_URL+":80/androidwebservice/getWordsInPackage.php?package_id=" + pack.getId()
                     + "&pack_vocab=pack_vocab_vn&word=wordvn";
         }else {
-            url = "http://172.20.10.9:8080/androidwebservice/getWordsInPackage.php?package_id=" + pack.getId()
+            url = "http://"+Constant.API_URL+":80/androidwebservice/getWordsInPackage.php?package_id=" + pack.getId()
                     + "&pack_vocab=pack_vocab&word=word";
         }
         GetData(url);
@@ -167,7 +167,7 @@ public class PackageInfoActivity extends AppCompatActivity {
 
                     AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
                     alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
-                            AlarmManager.INTERVAL_HALF_DAY, pendingIntent);
+                            AlarmManager.INTERVAL_FIFTEEN_MINUTES, pendingIntent);
 
                     Toast.makeText(PackageInfoActivity.this, getResources().getString(R.string.notificationSuccess), Toast.LENGTH_LONG).show();
                 }
@@ -261,14 +261,14 @@ public class PackageInfoActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if(readPreference() == "VE"){
                     //delete khỏi mysql
-                    String url = "http://172.20.10.9:8080/androidwebservice/deleteWordvn.php";
+                    String url = "http://"+Constant.API_URL+":80/androidwebservice/deleteWordvn.php";
                     DeleteWordMysql(url, Integer.toString(pack.getId()), Integer.toString(word.getId()));
 
                     //delete khỏi firebase
                     mData.child(uid).child("V-E_dict").child(pack.getName()).child(Integer.toString(word.getId())).removeValue();
                 }else {
                     //delete khỏi mysql
-                    String url = "http://172.20.10.9:8080/androidwebservice/deleteWord.php";
+                    String url = "http://"+Constant.API_URL+":80/androidwebservice/deleteWord.php";
                     DeleteWordMysql(url, Integer.toString(pack.getId()), Integer.toString(word.getId()));
 
                     //delete khỏi firebase

@@ -68,10 +68,10 @@ public class AddToPackageActivity extends AppCompatActivity {
         final FirebaseUser user = mAuth.getCurrentUser();
         String url;
         if (readPreference()=="VE") {
-            url = "http://172.20.10.9:8080/androidwebservice/getPackagesNotAdded.php?accountid=" + user.getUid()
+            url = "http://"+Constant.API_URL+":80/androidwebservice/getPackagesNotAdded.php?accountid=" + user.getUid()
                     + "&wordid=" + word.getId() + "&package=packagevn&pack_vocab=pack_vocab_vn";
         }else {
-            url = "http://172.20.10.9:8080/androidwebservice/getPackagesNotAdded.php?accountid=" + user.getUid()
+            url = "http://"+Constant.API_URL+":80/androidwebservice/getPackagesNotAdded.php?accountid=" + user.getUid()
                     + "&wordid=" + word.getId() + "&package=package&pack_vocab=pack_vocab";
         }
         GetData(url);
@@ -152,13 +152,13 @@ public class AddToPackageActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (readPreference() == "VE") { //nếu từ điển VE
                     //thêm vào mysql
-                    String url = "http://172.20.10.9:8080/androidwebservice/insertWordToPackagevn.php";
+                    String url = "http://"+Constant.API_URL+":80/androidwebservice/insertWordToPackagevn.php";
                     addWordToPackageMysql(url, Integer.toString(word.getId()), Integer.toString(pack.getId()));
                     //thêm vào firebase
                     mData.child(uid).child("V-E_dict").child(pack.getName()).child(Integer.toString(word.getId())).setValue(word.getWord());
                 }else { // nếu EV
                     //thêm vào mysql
-                    String url = "http://172.20.10.9:8080/androidwebservice/insertWordToPackage.php";
+                    String url = "http://"+Constant.API_URL+":80/androidwebservice/insertWordToPackage.php";
                     addWordToPackageMysql(url, Integer.toString(word.getId()), Integer.toString(pack.getId()));
                     //thêm vào firebase
                     mData.child(uid).child("E-V_dict").child(pack.getName()).child(Integer.toString(word.getId())).setValue(word.getWord());

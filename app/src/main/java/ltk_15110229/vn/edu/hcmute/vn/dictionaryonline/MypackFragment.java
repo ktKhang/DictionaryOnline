@@ -92,9 +92,9 @@ public class MypackFragment extends Fragment {
         final FirebaseUser user = mAuth.getCurrentUser();
         String url;
         if(readPreference() == "VE"){
-            url = "http://172.20.10.9:8080/androidwebservice/getPackages.php?accountid=" + user.getUid() + "&package=packagevn";
+            url = "http://"+Constant.API_URL+":80/androidwebservice/getPackages.php?accountid=" + user.getUid() + "&package=packagevn";
         }else {
-            url = "http://172.20.10.9:8080/androidwebservice/getPackages.php?accountid=" + user.getUid() + "&package=package";
+            url = "http://"+Constant.API_URL+":80/androidwebservice/getPackages.php?accountid=" + user.getUid() + "&package=package";
         }
         GetData(url);
 
@@ -184,7 +184,7 @@ public class MypackFragment extends Fragment {
                                         String strDate = mdformat.format(calendar.getTime());
 
                                         //thêm vào mysql
-                                        String url = "http://172.20.10.9:8080/androidwebservice/insertPackagevn.php?";
+                                        String url = "http://"+Constant.API_URL+":80/androidwebservice/insertPackagevn.php?";
                                         InsertPackageMysql(url, name.trim(), strDate, uid);
 
                                         Toast.makeText(MypackFragment.this.getActivity(), "Add successfully", Toast.LENGTH_SHORT).show();
@@ -204,7 +204,7 @@ public class MypackFragment extends Fragment {
                                         String strDate = mdformat.format(calendar.getTime());
 
                                         //thêm vào mysql
-                                        String url = "http://172.20.10.9:8080/androidwebservice/insertPackage.php?";
+                                        String url = "http://"+Constant.API_URL+":80/androidwebservice/insertPackage.php?";
                                         InsertPackageMysql(url, name.trim(), strDate, uid);
 
                                         Toast.makeText(MypackFragment.this.getActivity(), "Add successfully", Toast.LENGTH_SHORT).show();
@@ -217,13 +217,9 @@ public class MypackFragment extends Fragment {
                         Toast.makeText(MypackFragment.this.getActivity(), "Invalid name!", Toast.LENGTH_SHORT).show();
                     }
 
-                        //restart lại fragment
-                        Fragment frg = null;
-                        frg = getFragmentManager().findFragmentByTag("myFragmentTag");
-                        final FragmentTransaction ft = getFragmentManager().beginTransaction();
-                        ft.detach(frg);
-                        ft.attach(frg);
-                        ft.commit();
+                    mAuth = FirebaseAuth.getInstance();
+                    FirebaseUser user = mAuth.getCurrentUser();
+                    GetData("http://"+Constant.API_URL+":80/androidwebservice/getPackages.php?accountid=" + user.getUid() + "&package=package");
                         dialog.dismiss();
                 }
             }
@@ -280,14 +276,14 @@ public class MypackFragment extends Fragment {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if(readPreference() == "VE"){
                     //delete khỏi mysql
-                    String url = "http://172.20.10.9:8080/androidwebservice/deletePackagevn.php";
+                    String url = "http://"+Constant.API_URL+":80/androidwebservice/deletePackagevn.php";
                     DeletePackageMysql(url, Integer.toString(pack.getId()));
 
                     //delete khỏi firebase
                     mData.child(uid).child("V-E_dict").child(pack.getName().trim()).removeValue();
                 }else {
                     //delete khỏi mysql
-                    String url = "http://172.20.10.9:8080/androidwebservice/deletePackage.php";
+                    String url = "http://"+Constant.API_URL+":80/androidwebservice/deletePackage.php";
                     DeletePackageMysql(url, Integer.toString(pack.getId()));
 
                     //delete khỏi firebase

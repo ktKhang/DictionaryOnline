@@ -21,6 +21,7 @@
     <string name="yourpackages">My packages</string>
     <string name="headerAddToPackage">Choose package to add your word</string>
     <string name="addpackage">New package name</string>
+    <string name="addWord">New word</string>
     <string name="datecr">Created date: </string>
     <string name="notificationError">Package null! Please add words to this package to set daily notice </string>
     <string name="notification">Long click on this button to set daily notice</string>
