@@ -8,12 +8,54 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="77dp"
+        android:text="Repeat after 30m" />
+
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="78dp"
+        android:text="Repeat after 1h" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="241dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="This function will be coming soon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="80dp"
+        android:text="Setting notification"
         android:textAlignment="center"
         android:textSize="40dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="78dp"
+        android:text="Repeat after 15m" />
+
 </RelativeLayout>

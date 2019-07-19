@@ -14,8 +14,8 @@
     <string name="nav_appInfo">Information</string>
     <string name="nav_logout">Logout</string>
     <string name="nav_home">Home</string>
-    <string name="nav_mypack">My package</string>
-    <string name="nav_trans">Translate</string>
+    <string name="nav_mypack">My packages</string>
+    <string name="nav_trans">Setting</string>
     <string name="searchview">Enter to search...</string>
     <string name="AddToPackage">Add to packages</string>
     <string name="yourpackages">My packages</string>

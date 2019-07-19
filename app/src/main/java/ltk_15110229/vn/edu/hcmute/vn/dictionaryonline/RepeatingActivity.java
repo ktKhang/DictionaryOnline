@@ -50,6 +50,7 @@ public class RepeatingActivity extends AppCompatActivity implements TextToSpeech
 
         //khởi tạo texttospeech
         tts = new TextToSpeech(RepeatingActivity.this, (TextToSpeech.OnInitListener) this);
+        tts.speak(txtWord.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
         //bắt sự kiện phát âm cho imgSpeaker
         imgSpeaker.setOnClickListener(new View.OnClickListener() {
             @Override

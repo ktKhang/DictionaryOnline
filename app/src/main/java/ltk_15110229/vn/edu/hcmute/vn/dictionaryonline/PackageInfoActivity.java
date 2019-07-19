@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.SystemClock;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -154,20 +155,29 @@ public class PackageInfoActivity extends AppCompatActivity {
 
                     //calendar.set(Calendar.HOUR_OF_DAY, 12);
                     //calendar.set(Calendar.MINUTE, 35);
-                    calendar.set(Calendar.SECOND, 5);
+                    calendar.set(Calendar.SECOND, 1);
 
                     //truyền ds các từ trong gói
                     Bundle args = new Bundle();
                     args.putSerializable("ARRAYLIST", (Serializable) wordArrayList);
+//                    Intent intent = new Intent(getApplicationContext(), NotificationReceiver.class);
                     Intent intent = new Intent(getApplicationContext(), NotificationReceiver.class);
                     intent.putExtra("wordArrayList", args);
 
-                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 100,
-                            intent, PendingIntent.FLAG_UPDATE_CURRENT);
+//                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 100,
+//                            intent, PendingIntent.FLAG_UPDATE_CURRENT);
+                    PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 100, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-                    AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
-                            AlarmManager.INTERVAL_FIFTEEN_MINUTES, pendingIntent);
+                    AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+//                    alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+//                            AlarmManager.INTERVAL_HALF_HOUR, pendingIntent);
+
+                    alarmManager.setInexactRepeating(
+                            AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                            SystemClock.elapsedRealtime() + 5000,
+                            5000,
+                            pendingIntent
+                    );
 
                     Toast.makeText(PackageInfoActivity.this, getResources().getString(R.string.notificationSuccess), Toast.LENGTH_LONG).show();
                 }

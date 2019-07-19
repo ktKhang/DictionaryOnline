@@ -38,7 +38,9 @@
         android:layout_marginRight="20dp"
         android:ems="10"
         android:hint="Translate"
-        android:inputType="text"
+        android:inputType="textMultiLine"
+        android:minLines="2"
+        android:scrollbars="vertical"
         android:maxLength="2000"
         android:maxLines="7" />
 

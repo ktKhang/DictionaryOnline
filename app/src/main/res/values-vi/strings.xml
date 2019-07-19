@@ -14,9 +14,9 @@
     <string name="nav_VE">Từ điển Việt - Anh</string>
     <string name="nav_appInfo">Thông tin ứng dụng</string>
     <string name="nav_logout">Đăng xuất</string>
-    <string name="nav_home">Trang chủ</string>
-    <string name="nav_mypack">Từ của tôi</string>
-    <string name="nav_trans">Dịch văn bản</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_mypack">My packages</string>
+    <string name="nav_trans">Setting</string>
     <string name="searchview">Nhập để tìm kiếm...</string>
     <string name="AddToPackage">Thêm vào gói</string>
     <string name="yourpackages">Danh sách gói từ</string>
